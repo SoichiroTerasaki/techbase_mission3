@@ -84,7 +84,7 @@
     
     <form action="" method="post">
         <!--コメントフォームの作成-->
-        <input type="num" name="option" value="<?php echo $edit_num; ?>"> <!-- php内の$edit_numを表示 -->
+
         <input type="text" name="name" value="<?php echo $edit_name; ?>" placeholder="名前"> <!--  php内の$edit_nameを表示-->
         <input type="text" name="comment" value="<?php echo $edit_comment; ?>" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
         <input type="submit" name="submit" value="送信"><br>
