@@ -14,7 +14,7 @@
         <!--コメントフォームの作成-->
 
         <input type="text" name="name" placeholder="名前"> <!--  php内の$edit_nameを表示-->
-        <input type="text" name="comment" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
+        <input type="text" name="str" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
         <input type="submit" name="submit" value="送信"><br>
         <!--削除フォームの作成-->
         <input type="number" name="submit_num" placeholder="削除したい番号を入力">
