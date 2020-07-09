@@ -61,7 +61,7 @@
             foreach($lines as $line){                                      #先ほどの配列の要素数（＝行数）だけループさせる
                 $contents = explode("<>",$line);                           #ループ処理内：区切り文字「<>」で分割して
                 $number = $contents[0];                                    #投稿番号を取得
-                if ($contents[0] != $delete_num){                          #同・ループ処理内：投稿番号と削除対象番号を比較。等しくない場合は
+                if ($number != $delete_num){                               #同・ループ処理内：投稿番号と削除対象番号を比較。等しくない場合は
                     fwrite($fp, $line.PHP_EOL);                            #ファイルに追加書き込みを行う(もとのまま書き込みます)
                 }
             }
