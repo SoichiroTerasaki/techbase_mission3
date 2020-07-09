@@ -1,4 +1,5 @@
 <!--【POST送信の各値の変数と「投稿番号」「投稿日時」を扱う変数を用意。更にこれらを結合して1行にするための変数も用意し、ここに結合結果を入れる】-->
+<!--【テキストファイルにある投稿の番号を元に、新たな投稿番号を決める】-->
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -20,6 +21,7 @@
         $str = $_POST["str"]; #コメント内容を取得
         
         $num = 1; #num : 投稿番号
+    
         if (file_exists($filename)){ #もし、事前に投稿されていたら
             $lines = file($filename,FILE_IGNORE_NEW_LINES);
             $num = count($lines) + 1; #ファイルの行数を数え、行数+1を投稿番号にします。
