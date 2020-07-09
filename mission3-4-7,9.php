@@ -18,6 +18,7 @@
         $name = $_POST["name"]; #名前を取得
         $str = $_POST["str"]; #コメント内容を取得
         $date = date("Y年m月d日 H:i:s"); #date : 投稿日時
+        $option = $_POST["option"]; #$option : 編集番号の取得
 
         if (file_exists($filename)){
             $lines = file($filename,FILE_IGNORE_NEW_LINES); #ファイル読み込み関数で、ファイルの中身を1行1要素として配列変数に代入する。
@@ -87,7 +88,7 @@
         <!--コメントフォームの作成-->
         <input type="num" name="option" value="<?php echo $edit_num; ?>"> <!-- php内の$edit_numを表示 -->
         <input type="text" name="name" value="<?php echo $edit_name; ?>" placeholder="名前"> <!--  php内の$edit_nameを表示-->
-        <input type="text" name="comment" value="<?php echo $edit_comment; ?>" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
+        <input type="text" name="str" value="<?php echo $edit_comment; ?>" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
         <input type="submit" name="submit" value="送信"><br>
         <!--削除フォームの作成-->
         <input type="number" name="submit_num" placeholder="削除したい番号を入力">
