@@ -27,7 +27,7 @@
         if (file_exists($filename)){
             $lines = file($filename,FILE_IGNORE_NEW_LINES); #ファイル読み込み関数で、ファイルの中身を1行1要素として配列変数に代入する。
             $last_line = end($lines);                       #最後の行だけを取り出す
-            $contents = explode("<>",$line);                #最後の行を<>で分割する。
+            $contents = explode("<>",$last_line);                #最後の行を<>で分割する。
             $last_num = $contents[0];                       #$contents[0]は最後の行の投稿番号になっている
             $num = $last_num + 1;                           #投稿番号$numは、最後の行の投稿番号に+1したものになる
         }
