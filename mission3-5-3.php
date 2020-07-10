@@ -94,12 +94,12 @@
         $lines = file($filename,FILE_IGNORE_NEW_LINES); #ファイルを1行ずつ読み込み、配列変数$linesに代入する
         foreach($lines as $line){                       #ファイルを読み込んだ配列を、配列の数（＝行数）だけループさせる
             $elems = explode("<>",$line);               #ループ処理内：区切り文字「<>」で分割して、それぞれの値$elemsを取得
+            $elems = array_slice($elems, 0, 4);         #パスワードが表示されないように、パスワード以降の部分を捨てる
             foreach($elems as $elem){
                 echo $elem." ";                         #同・ループ処理内：上記で取得した値$elemをecho等を用いて表示
             }
             echo "<br>";
         }
-        
         
     ?>
     
