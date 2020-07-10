@@ -109,7 +109,7 @@
         <input type="hidden" name="option" value="<?php echo $edit_num; ?>"> <!-- php内の$edit_numを表示 -->
         <input type="text" name="name" value="<?php echo $edit_name; ?>" placeholder="名前"> <!--  php内の$edit_nameを表示-->
         <input type="text" name="str" value="<?php echo $edit_comment; ?>" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
-        <input type="text" name="password" value="<?php echo $edit_pw; ?>" placeholder="パスワード"> <!-- php内の$edit_pwを表示 -->
+        <input type="text" name="password" placeholder="パスワード">
         <input type="submit" name="submit" value="送信"><br>
         <!--削除フォームの作成-->
         <input type="number" name="submit_num" placeholder="削除したい番号を入力">
