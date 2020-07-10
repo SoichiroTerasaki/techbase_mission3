@@ -103,21 +103,22 @@
         
     ?>
     
+    
     <form action="" method="post">
         <!--コメントフォームの作成-->
-        <input type="num" name="option" value="<?php echo $edit_num; ?>"> <!-- php内の$edit_numを表示 -->
+        <input type="hidden" name="option" value="<?php echo $edit_num; ?>"> <!-- php内の$edit_numを表示 -->
         <input type="text" name="name" value="<?php echo $edit_name; ?>" placeholder="名前"> <!--  php内の$edit_nameを表示-->
         <input type="text" name="str" value="<?php echo $edit_comment; ?>" placeholder="コメント"> <!--  php内の$edit_commentを表示-->
-        <input type="text" name="password" placeholder="パスワード">
+        <input type="text" name="password" value="<?php echo $edit_pw; ?>" placeholder="パスワード"> <!-- php内の$edit_pwを表示 -->
         <input type="submit" name="submit" value="送信"><br>
         <!--削除フォームの作成-->
         <input type="number" name="submit_num" placeholder="削除したい番号を入力">
-        <input type="submit" name="delete" value="削除">
-        <input type="text" name="delete_password" placeholder="パスワード"><br>           #削除用のパスワード入力ボックス
+        <input type="text" name="delete_password" placeholder="パスワード">           <!--削除用のパスワード入力ボックス-->
+        <input type="submit" name="delete" value="削除"><br>
         <!--編集フォームの作成-->
         <input type="number" name="submit_edit_num" placeholder="編集したい番号を入力">
-        <input type="submit" name="edit" value="編集">
-        <input type="text" name="edit_password" placeholder="パスワード"><br>             #編集用のパスワード入力ボックス
+        <input type="text" name="edit_password" placeholder="パスワード">             <!--編集用のパスワード入力ボックス-->
+        <input type="submit" name="edit" value="編集"><br>
     </form>
     
     
