@@ -42,7 +42,7 @@
                     $contents = explode("<>",$line);
                     $number = $contents[0];                                      #各行の投稿番号を
                     if ($number == $option){                                     #比較。一致した時のみ
-                        $re_line = $option."<>".$name."<>".$comment."<>".$date."<>".$password;  #編集のフォームから送信された値と
+                        $re_line = $option."<>".$name."<>".$comment."<>".$date;  #編集のフォームから送信された値と
                         fwrite($fp, $re_line.PHP_EOL);                           #差し替える。
                     }
                     else {                                                       #投稿番号と一致しないときは
